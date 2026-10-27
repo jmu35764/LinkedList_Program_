@@ -67,37 +67,29 @@ class SinglyLinkedList():
             self._tail = previous
             self._tail.next = None
 
-        self._count -= 1
+        self._count -= 1       
 
-    '''def remove(self, value):
+    def contains(self, target):
         current = self._head
-        previous = None
-        
-        while current and current.data != value:
-            previous = current
-            current = current.next
 
-        if current is None:
-            raise ValueError(f"Value {value} not found in the list.")
+        while current is not None:
+            if current.data == target:
+                return True
 
-        if previous is None:
-            self._head = current.next
+        return False
 
-        else:
-            previous.next = current.next
+    def is_empty(self):
+        if self._head is None:
+            return True
 
-        if current == self._tail:
-            self._tail = previous
-
-        self._count -= 1'''
-
-        
+    def __len__(self):
+        return self._count
 
     def __iter__(self):
         current = self._head
         
-        while current is not None:
-            print(current.data)
+        while current:
+            yield current.data
             current = current.next
 
 

@@ -11,6 +11,9 @@
     <OutputPath>.</OutputPath>
     <Name>LinkedList_Program</Name>
     <RootNamespace>LinkedList_Program</RootNamespace>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +27,11 @@
     <Compile Include="LinkedList_Program.py" />
     <Compile Include="Node.py" />
     <Compile Include="SinglyLinkedList.py" />
+    <Compile Include="Tests\test_sll.py" />
+    <Compile Include="Tests\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
