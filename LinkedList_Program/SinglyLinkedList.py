@@ -33,12 +33,73 @@ class SinglyLinkedList():
 
         self._count += 1
 
-    def __iter__():
-        current = self.__head
+    def insert_after(self, existing_value, new_value):
+        new_node = node(new_value)
+        current = self._head
+
+        while current.data is not existing_value:
+            current = current.next
+
+            if self._tail.data != existing_value and current is None:
+                raise ValueError(f"Value {existing_value} not found in the list.")
+
+        if current.data == self._tail.data:
+            self._tail.next = new_node
+            self._tail = new_node
+        else:
+            new_node.next = current.next
+            current.next = new_node
+
+    def remove(self, value):
+        current = self._head
+        previous = None
+
+        while current and current.data != value:
+            previous = current
+            current = current.next
+
+        if previous is None:
+            self._head = current.next
+        else:
+            previous.next = current.next
+
+        if current == self._tail:
+            self._tail = previous
+            self._tail.next = None
+
+        self._count -= 1
+
+    '''def remove(self, value):
+        current = self._head
+        previous = None
+        
+        while current and current.data != value:
+            previous = current
+            current = current.next
+
+        if current is None:
+            raise ValueError(f"Value {value} not found in the list.")
+
+        if previous is None:
+            self._head = current.next
+
+        else:
+            previous.next = current.next
+
+        if current == self._tail:
+            self._tail = previous
+
+        self._count -= 1'''
+
+        
+
+    def __iter__(self):
+        current = self._head
         
         while current is not None:
             print(current.data)
             current = current.next
+
 
 
 
