@@ -21,5 +21,8 @@ sl1.__iter__()
 sl1.remove(5)
 sl1.__iter__()
 
+print(sl1.contains(6))
+print(sl1.contains(11))
+
 
 
