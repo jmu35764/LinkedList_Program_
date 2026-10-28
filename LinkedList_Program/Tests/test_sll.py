@@ -41,6 +41,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.append(11)
         with self.assertRaises(ValueError):
             sl1.remove(10)
+        self.assertEqaul(sl1._count, 3)  # Ensure the count remains unchanged
 
 if __name__ == '__main__':
     unittest.main()
