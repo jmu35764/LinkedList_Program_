@@ -13,4 +13,5 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertFalse(sl1.contains(10))
 
 
-
+if __name__ == '__main__':
+    unittest.main()
