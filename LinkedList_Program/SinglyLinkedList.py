@@ -100,6 +100,9 @@ class SinglyLinkedList():
             yield current.data
             current = current.next
 
+    def build_list_forward(self, values):
+        for value in values:
+            self.append(value)
 
 
 
