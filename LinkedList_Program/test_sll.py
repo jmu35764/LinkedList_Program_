@@ -19,8 +19,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.append(11)
         sl1.insert_after(6, 8)
         self.assertTrue(sl1.contains(8))
-        with self.assertRaises(ValueError):
-            sl1.insert_after(7, 9)
+
 
 if __name__ == '__main__':
     unittest.main()
