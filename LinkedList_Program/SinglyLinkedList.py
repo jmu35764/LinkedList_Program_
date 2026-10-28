@@ -1,5 +1,5 @@
 class node():
-    def __init__(self, data):
+    def __init__(self, data: int = 0):
         self.data = data
         self.next = None
 
@@ -23,7 +23,7 @@ class SinglyLinkedList():
         self._count += 1
 
     def prepend(self, value):
-        new_node = Node(value)
+        new_node = node(value)
 
         new_node.next = self._head
         self._head = new_node
@@ -97,12 +97,39 @@ class SinglyLinkedList():
         current = self._head
         
         while current:
-            yield current.data
+            print(current.data)
             current = current.next
 
     def build_list_forward(self, values):
         for value in values:
             self.append(value)
+    
+    def build_list_backward(self, values):
+        for value in values:
+            self.prepend(value)
+
+    def remove_all(self, value):
+        current = self._head
+        previous = None
+        nodes_removed = 0
+        while current:
+            if current.data == value:
+                if previous is None:
+                    self._head = current.next
+                else:
+                    previous.next = current.next
+                if current == self._tail:
+                    self._tail = previous
+                    if self._tail is not None:
+                        self._tail.next = None
+                self._count -= 1
+                nodes_removed += 1
+                current = current.next
+            else:
+                previous = current
+                current = current.next
+        return nodes_removed
+
 
 
 

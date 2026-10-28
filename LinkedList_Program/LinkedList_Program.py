@@ -1,4 +1,4 @@
-from Node import node
+from SinglyLinkedList import node
 from SinglyLinkedList import SinglyLinkedList
 
 sl1 = SinglyLinkedList()
@@ -23,6 +23,12 @@ sl1.__iter__()
 
 print(sl1.contains(6))
 print(sl1.contains(11))
+
+sl2 = SinglyLinkedList()
+sl2.build_list_forward([1, 2, 3, 4, 5])
+sl2.__iter__()
+sl3.build_list_backward([6, 7, 8, 9, 10])
+sl3.__iter__()
 
 
 
