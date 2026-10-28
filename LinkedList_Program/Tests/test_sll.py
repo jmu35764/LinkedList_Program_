@@ -20,6 +20,14 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.insert_after(6, 8)
         self.assertTrue(sl1.contains(8))
 
+    def test_insert_after_nonexistent(self):
+        sl1 = SinglyLinkedList()
+        sl1.append(5)
+        sl1.append(6)
+        sl1.append(11)
+        with self.assertRaises(ValueError):
+            sl1.insert_after(10, 9)
+
     def test_is_empty(self):
         sl1 = SinglyLinkedList()
         self.assertTrue(sl1.is_empty())
