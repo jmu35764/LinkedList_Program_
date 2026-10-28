@@ -27,8 +27,14 @@ print(sl1.contains(11))
 sl2 = SinglyLinkedList()
 sl2.build_list_forward([1, 2, 3, 4, 5])
 sl2.__iter__()
-sl3.build_list_backward([6, 7, 8, 9, 10])
+sl3 = SinglyLinkedList()
+sl3.build_list_backward([6, 7, 8, 7, 10])
 sl3.__iter__()
+sl3.remove_all(7)
+sl3.__iter__()
+sl2.remove_all(7)
+print(sl2)
+
 
 
 

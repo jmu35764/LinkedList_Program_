@@ -71,8 +71,6 @@ class SinglyLinkedList():
             self._tail.next = None
 
         self._count -= 1
-        
-
 
     def contains(self, target):
         current = self._head
@@ -128,7 +126,20 @@ class SinglyLinkedList():
             else:
                 previous = current
                 current = current.next
-        return nodes_removed
+        return print(f"Nodes Removed: {nodes_removed}")
+
+    def __str__(self) -> str:
+        output = "Head -> "
+        current = self._head
+
+        while current:
+            output = output + str(current.data) + " -> "
+            current = current.next
+
+        return f"{output}None"
+
+
+        
 
 
 
