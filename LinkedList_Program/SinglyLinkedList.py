@@ -58,7 +58,7 @@ class SinglyLinkedList():
             previous = current
             current = current.next
 
-            if current.data != value and current is None:
+            if self._tail.data != value and current is None:
                 raise ValueError(f"Value {value} not found in the list")
 
         if previous is None:
