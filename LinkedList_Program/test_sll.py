@@ -12,5 +12,15 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertTrue(sl1.contains(6))
         self.assertFalse(sl1.contains(10))
 
+    def test_insert_after(self):
+        sl1 = SinglyLinkedList()
+        sl1.append(5)
+        sl1.append(6)
+        sl1.append(11)
+        sl1.insert_after(6, 8)
+        self.assertTrue(sl1.contains(8))
+        with self.assertRaises(ValueError):
+            sl1.insert_after(7, 9)
+
 if __name__ == '__main__':
     unittest.main()
