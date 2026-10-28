@@ -82,6 +82,8 @@ class SinglyLinkedList():
     def is_empty(self):
         if self._head is None:
             return True
+        else:
+            return False
 
     def __len__(self):
         return self._count

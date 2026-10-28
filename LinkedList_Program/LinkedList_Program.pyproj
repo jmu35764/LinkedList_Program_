@@ -25,7 +25,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="LinkedList_Program.py" />
-    <Compile Include="Node.py" />
     <Compile Include="SinglyLinkedList.py" />
     <Compile Include="Tests\test_sll.py" />
     <Compile Include="Tests\__init__.py" />
