@@ -26,5 +26,21 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.append(5)
         self.assertFalse(sl1.is_empty())
 
+    def test_remove(self):
+        sl1 = SinglyLinkedList()
+        sl1.append(5)
+        sl1.append(6)
+        sl1.append(11)
+        sl1.remove(6)
+        self.assertFalse(sl1.contains(6))
+
+    def test_remove_nonexistent(self):
+        sl1 = SinglyLinkedList()
+        sl1.append(5)
+        sl1.append(6)
+        sl1.append(11)
+        with self.assertRaises(ValueError):
+            sl1.remove(10)
+
 if __name__ == '__main__':
     unittest.main()

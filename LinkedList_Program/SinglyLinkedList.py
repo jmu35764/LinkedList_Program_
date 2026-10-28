@@ -58,6 +58,9 @@ class SinglyLinkedList():
             previous = current
             current = current.next
 
+            if current.data != value and current is None:
+                raise ValueError(f"Value {value} not found in the list")
+
         if previous is None:
             self._head = current.next
         else:
@@ -67,7 +70,9 @@ class SinglyLinkedList():
             self._tail = previous
             self._tail.next = None
 
-        self._count -= 1       
+        self._count -= 1
+        
+
 
     def contains(self, target):
         current = self._head
