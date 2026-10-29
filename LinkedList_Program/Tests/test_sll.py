@@ -47,6 +47,7 @@ class TestSinglyLinkedList(unittest.TestCase):
     def test_len(self):
         sl1 = SinglyLinkedList()
         values = [1, 2, 3, 4, 5]
+        sl1.build_list_forward(values)
         self.assertEqual(len(sl1), 5)
 
     def test_insert_after(self):
