@@ -88,16 +88,6 @@ class SinglyLinkedList():
         else:
             return False
 
-    def __len__(self):
-        return self._count
-
-    def __iter__(self):
-        current = self._head
-        
-        while current:
-            print(current.data)
-            current = current.next
-
     def build_list_forward(self, values):
         for value in values:
             self.append(value)
@@ -137,6 +127,16 @@ class SinglyLinkedList():
             current = current.next
 
         return f"{output}None"
+
+    def __len__(self):
+        return self._count
+
+    def __iter__(self):
+        current = self._head
+        
+        while current:
+            print(current.data)
+            current = current.next
 
 
         
