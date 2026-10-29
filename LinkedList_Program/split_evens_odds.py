@@ -41,6 +41,6 @@ class SplitEvensOdds(SinglyLinkedList):
 
             current = next_node
 
-        return odd_list, even_list
+        return even_list, odd_list
 
 
