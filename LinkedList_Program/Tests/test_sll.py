@@ -25,6 +25,20 @@ class TestSinglyLinkedList(unittest.TestCase):
 
         self.assertEqual(sl1._tail.data, 6)
 
+
+
+    def test_prepend(self):
+        sl1 = SinglyLinkedList()
+        self.assertTrue(sl1.is_empty())
+
+        sl1.prepend(5)
+        self.assertTrue(sl1.contains(5))
+
+        sl1.prepend(6)
+        self.assertTrue(sl1.contains(6))
+
+        self.assertEqual(sl1._head.data, 6)
+
     def test_insert_after(self):
         sl1 = SinglyLinkedList()
         sl1.append(5)
