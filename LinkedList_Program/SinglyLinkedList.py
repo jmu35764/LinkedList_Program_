@@ -140,7 +140,7 @@ class SinglyLinkedList():
         current = self._head
         
         while current:
-            print(current.data)
+            yield current.data
             current = current.next
 
 
