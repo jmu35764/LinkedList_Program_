@@ -43,7 +43,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.build_list_forward(values)
         current = sl1._head
         for value in values:
-            self.assertEqaul(sl1.current.data, value)
+            self.assertEqual(sl1.current.data, value)
             current = current.next
 
     def test_insert_after(self):
