@@ -1,7 +1,7 @@
 from SinglyLinkedList import node
 from SinglyLinkedList import SinglyLinkedList
 
-sl1 = SinglyLinkedList()
+"""sl1 = SinglyLinkedList()
 
 n1 = node()
 n1.data = 5
@@ -33,7 +33,9 @@ sl3.__iter__()
 sl3.remove_all(7)
 sl3.__iter__()
 sl2.remove_all(7)
-print(sl2)
+print(sl2)"""
+
+
 
 
 
