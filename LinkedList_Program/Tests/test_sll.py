@@ -67,7 +67,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertFalse(sl1.is_empty())
 
     def test_remove(self):
-        values = [5, 6, 7, 11]
+        values = [5, 6, 7, 8, 11]
         sl1 = SinglyLinkedList()
         sl1.build_list_forward(values)
 
