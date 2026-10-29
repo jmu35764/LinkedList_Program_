@@ -80,6 +80,9 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.remove(sl1._tail.data)
         self.assertFalse(sl1.contains(11))
 
+        sl1.remove(7)
+        self.assertFalse(sl1.contains(7))
+
     def test_remove_nonexistent(self):
         sl1 = SinglyLinkedList()
         sl1.append(5)
