@@ -61,6 +61,10 @@ class SinglyLinkedList():
             if self._tail.data != value and current is None:
                 raise ValueError(f"Value {value} not found in the list")
 
+        if self.is_empty() is True:
+            self._head = None
+            self._tail = None
+            
         if previous is None:
             self._head = current.next
         else:
