@@ -39,6 +39,7 @@ print(sl2)"""
 sl4 = SplitEvensOdds()
 sl4.build_list_forward([1, 2, 2, 2, 3])
 sl4.__iter__()
+list(sl4.__iter__())
 evens, odds = sl4.split_even_odd()
 
 print(f"Evens:  {evens}")
