@@ -25,8 +25,6 @@ class TestSinglyLinkedList(unittest.TestCase):
 
         self.assertEqual(sl1._tail.data, 6)
 
-
-
     def test_prepend(self):
         sl1 = SinglyLinkedList()
         self.assertTrue(sl1.is_empty())
@@ -38,6 +36,15 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertTrue(sl1.contains(6))
 
         self.assertEqual(sl1._head.data, 6)
+
+    def test_build_list_forward(self):
+        sl1 = SinglyLinkedList()
+        values = [10, 20, 30, 40, 50]
+        sl1.build_list_forward(values)
+        current = sl1._head
+        for value in values
+            self.assertEqaul(sl1.current.data, value)
+            current = current.next
 
     def test_insert_after(self):
         sl1 = SinglyLinkedList()
