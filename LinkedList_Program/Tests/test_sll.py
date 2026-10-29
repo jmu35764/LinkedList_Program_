@@ -3,6 +3,7 @@ from SinglyLinkedList import SinglyLinkedList
 from SinglyLinkedList import node
 
 class TestSinglyLinkedList(unittest.TestCase):
+    
     def test_contains(self):
         sl1 = SinglyLinkedList()
         sl1.append(5)
@@ -11,6 +12,17 @@ class TestSinglyLinkedList(unittest.TestCase):
 
         self.assertTrue(sl1.contains(6))
         self.assertFalse(sl1.contains(10))
+    
+    def test_append(self):
+        sl1 = SinglyLinkedList()
+        self.assertTrue(sl1.is_empty())
+
+        sl1.append(5)
+        self.assertTrue(sl1.contains(5))
+
+        sl1.append(6)
+        self.assertTrue(sl1.contains(6))
+
 
     def test_insert_after(self):
         sl1 = SinglyLinkedList()

@@ -28,6 +28,7 @@
     <Compile Include="SinglyLinkedList.py" />
     <Compile Include="split_evens_odds.py" />
     <Compile Include="Tests\test_sll.py" />
+    <Compile Include="Tests\test_split_even_odds.py" />
     <Compile Include="Tests\__init__.py" />
   </ItemGroup>
   <ItemGroup>

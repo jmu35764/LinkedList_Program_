@@ -1,5 +1,6 @@
 from SinglyLinkedList import node
 from SinglyLinkedList import SinglyLinkedList
+from split_evens_odds import SplitEvensOdds
 
 """sl1 = SinglyLinkedList()
 
@@ -35,8 +36,13 @@ sl3.__iter__()
 sl2.remove_all(7)
 print(sl2)"""
 
+sl4 = SplitEvensOdds()
+sl4.build_list_forward([1, 2, 2, 2, 3])
+sl4.__iter__()
+evens, odds = sl4.split_even_odd()
 
-
-
+print(f"Evens:  {evens}")
+print(f"Odds:   {odds}")
+print(sl4.is_empty())
 
 
