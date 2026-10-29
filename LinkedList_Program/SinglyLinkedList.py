@@ -80,7 +80,7 @@ class SinglyLinkedList():
                 return True
             current = current.next
 
-        if current is None:    
+        if self._head is None:
             return False
 
     def is_empty(self):
