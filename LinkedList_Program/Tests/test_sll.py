@@ -23,7 +23,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.append(6)
         self.assertTrue(sl1.contains(6))
 
-        self.assertEqual(sl1._tail.data, 5)
+        self.assertEqual(sl1._tail.data, 6)
 
     def test_insert_after(self):
         sl1 = SinglyLinkedList()
