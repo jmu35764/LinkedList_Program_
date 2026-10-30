@@ -127,6 +127,7 @@ class TestSinglyLinkedList(unittest.TestCase):
 
         self.assertEqual(sl1._head.data, 1)
         self.assertEqual(sl1._tail.data, 5)
+        self.assertTrue(sl1._tail.next is None)
 
 if __name__ == '__main__':
     unittest.main()
