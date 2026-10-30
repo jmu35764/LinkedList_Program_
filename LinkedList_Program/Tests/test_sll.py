@@ -120,5 +120,13 @@ class TestSinglyLinkedList(unittest.TestCase):
 
         self.assertEqual(sl1._count, 5)
 
+    def test_correct_head_and_tail(self):
+        sl1 = SinglyLinkedList()
+        values = [1, 2, 3, 4, 5]
+        sl1.build_list_forward(values)
+
+        self.assertEqual(sl1._head.data, 1)
+        self.assertEqual(sl1._tail.data, 5)
+
 if __name__ == '__main__':
     unittest.main()
