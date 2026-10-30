@@ -44,6 +44,13 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertEqual(list(sl1), values)
         self.assertEqual(len(sl1), 5)
 
+    def test_build_list_backward(self):
+        sl1 = SinglyLinkedList()
+        values = [10, 20, 30, 40, 50]
+        sl1.build_list_backward(values)
+        self.assertEqual(list(sl1), reversed(values))
+        self.assertEqual(len(sl1), 5)
+
     def test_len(self):
         sl1 = SinglyLinkedList()
         values = [1, 2, 3, 4, 5]
