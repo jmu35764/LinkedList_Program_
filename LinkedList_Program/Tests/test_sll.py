@@ -113,5 +113,12 @@ class TestSinglyLinkedList(unittest.TestCase):
             sl1.remove(10)
         self.assertEqual(sl1._count, 3)  # Ensure the count remains unchanged
 
+    def test_correct_count(self):
+        sl1.SinglyLinkedlist()
+        values = [1, 2, 3, 4, 5]
+        sl1.build_list_forward(values)
+
+        sefl.assertEqual(sl1._count, 5)
+
 if __name__ == '__main__':
     unittest.main()
