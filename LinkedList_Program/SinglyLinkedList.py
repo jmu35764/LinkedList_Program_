@@ -127,6 +127,10 @@ class SinglyLinkedList():
             else:
                 previous = current
                 current = current.next
+                
+                if self._tail.data != value and current is None:
+                    raise ValueError(f"Value {value} not found in the list")
+
         return print(f"Nodes Removed: {nodes_removed}")
 
     def __str__(self) -> str:
@@ -136,9 +140,6 @@ class SinglyLinkedList():
         while current:
             output = output + str(current.data) + " -> "
             current = current.next
-
-            if self._tail.data != value and current is None:
-                raise ValueError(f"Value {value} not found in the list")
 
         return f"{output}None"
 
