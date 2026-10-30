@@ -13,7 +13,7 @@ class Test_SplitEvensOdds(unittest.TestCase):
         evens, odds = sl1.split_even_odd()
 
         self.assertEqual(list(evens), [2, 4, 6])
-        self.assertEqual(list(odds), [1, 2, 5])
+        self.assertEqual(list(odds), [1, 3, 5])
 
 
 
