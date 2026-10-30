@@ -16,8 +16,8 @@ class Test_SplitEvensOdds(unittest.TestCase):
 
         self.assertEqual(list(evens), even_numbers)
         self.assertEqual(list(odds), odd_numbers)
-        self.assertEqual(evens._counts(), 3)
-        self.assertEqual(odds._counts(), 3)
+        self.assertEqual(len(evens), 3)
+        self.assertEqual(len(odds), 3)
 
 
 
