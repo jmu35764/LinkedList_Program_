@@ -47,6 +47,26 @@ class Test_SplitEvensOdds(unittest.TestCase):
 
         self.assertTrue(sl1.is_empty())
 
+    def test_all_odd(self):
+        sl1 = SplitEvensOdds()
+        values = [1, 3, 5, 7]
+        even_numbers = [value for value in values if value % 2 == 0]
+        odd_numbers = [value for value in values if value % 2 != 0]
+        sl1.build_list_forward(values)
+
+        evens, odds = sl1.split_even_odd()
+
+        self.assertEqual(list(evens), even_numbers)
+        self.assertEqual(list(odds), odd_numbers)
+
+        self.assertEqual(len(evens), 0)
+        self.assertEqual(len(odds), 4)
+        self.assertEqual(len(evens) + len(odds), len(values) )
+
+        self.assertTrue(evens.is_empty())
+        self.assertTrue(odds._tail.next is None)
+
+        self.assertTrue(sl1.is_empty())
 
 
 
