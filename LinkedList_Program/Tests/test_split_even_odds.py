@@ -3,8 +3,18 @@ from SinglyLinkedList import SinglyLinkedList
 from SinglyLinkedList import node
 from split_evens_odds import SplitEvensOdds
 
-class my_class(object):
-    pass
+class Test_SplitEvensOdds(unittest.TestCase):
+    
+    def test_even_and_odd(self):
+        sl1 = SplitEvensOdds()
+        values = [1, 2, 3, 4, 5, 6]
+        sl1.build_list_forward(values_01)
+
+        evens, odds = sl1.split_even_odd()
+
+        self.assertEqual(list(evens), [2, 4, 6])
+        self.assertEqual(list(odds), [1, 2, 5])
+
 
 
 
