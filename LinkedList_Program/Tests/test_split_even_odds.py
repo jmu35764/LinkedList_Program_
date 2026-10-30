@@ -23,6 +23,8 @@ class Test_SplitEvensOdds(unittest.TestCase):
         self.assertTrue(evens._tail.next is None)
         self.assertTrue(odds._tail.next is None)
 
+        self.assertTre(sl1.is_empty())
+
 
 
 
