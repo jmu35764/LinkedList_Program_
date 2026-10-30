@@ -113,6 +113,14 @@ class TestSinglyLinkedList(unittest.TestCase):
             sl1.remove(10)
         self.assertEqual(sl1._count, 3)  # Ensure the count remains unchanged
 
+    def test_remove_all_nonexistent(self):
+        values = [3, 2, 3, 3, 5, 3]
+        sl1 = SinglyLinkedList()
+        sl1.build_list_forward(values)
+
+        with self.assertRaises(ValueError)
+            sl1.remove_all(7)
+
     def test_correct_count(self):
         sl1 = SinglyLinkedList()
         values = [1, 2, 3, 4, 5]
