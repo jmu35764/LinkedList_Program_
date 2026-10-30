@@ -9,12 +9,13 @@ class Test_SplitEvensOdds(unittest.TestCase):
         sl1 = SplitEvensOdds()
         values = [1, 2, 3, 4, 5, 6]
         even_numbers = [value for value in values if value % 2 == 0]
+        odd_numbers = [value for value in values if value % 2 != 0]
         sl1.build_list_forward(values)
 
         evens, odds = sl1.split_even_odd()
 
         self.assertEqual(list(evens), even_numbers)
-        self.assertEqual(list(odds), [1, 3, 5])
+        self.assertEqual(list(odds), odd_numbers)
 
 
 
