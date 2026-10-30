@@ -110,6 +110,16 @@ class Test_SplitEvensOdds(unittest.TestCase):
 
         self.assertTrue(sl1.is_empty())
 
+    def test_empty_list(self):
+        sl1 = SplitEvensOdds()
+        values = []
+        sl1.build_list_forward(values)
+        
+        with self.assertRaises(ValueError):
+            evens, odds = sl1.split_even_odd()
+
+        
+
 
 
 
