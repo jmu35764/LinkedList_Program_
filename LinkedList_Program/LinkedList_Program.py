@@ -45,6 +45,8 @@ print("\nNow we will remove all 7's from the list")
 sl4.remove_all(7)
 print(sl4)
 
+sl4.remove_all(7)
+
 #*** CREATING AND SPLITTING LISTS ***
 print("\n*** CREATING AND SPLITTING LISTS")
 print("Now we will create a list that will be split into two lists")
