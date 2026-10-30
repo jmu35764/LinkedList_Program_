@@ -118,7 +118,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         values = [1, 2, 3, 4, 5]
         sl1.build_list_forward(values)
 
-        sefl.assertEqual(sl1._count, 5)
+        self.assertEqual(sl1._count, 5)
 
 if __name__ == '__main__':
     unittest.main()
