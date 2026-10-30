@@ -72,7 +72,11 @@ class SinglyLinkedList():
 
         if current == self._tail:
             self._tail = previous
-            self._tail.next = None
+            
+            if previous is None:
+                self._tail = None    
+            else:
+                self._tail.next = None
 
         self._count -= 1
 
