@@ -96,6 +96,14 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1.remove(7)
         self.assertTrue(sl1.is_empty())
 
+    def test_remove_all(self):
+        values = [7, 2, 7, 7, 5, 7]
+        sl1 = SinglyLinkedList()
+        sl1.build_list_forward(values)
+
+        sl1.remove_all(7)
+        self.assertFalse(sl1.contains(7))
+
     def test_remove_nonexistent(self):
         sl1 = SinglyLinkedList()
         sl1.append(5)
