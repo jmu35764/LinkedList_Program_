@@ -118,7 +118,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         sl1 = SinglyLinkedList()
         sl1.build_list_forward(values)
 
-        with self.assertRaises(ValueError)
+        with self.assertRaises(ValueError):
             sl1.remove_all(7)
 
     def test_correct_count(self):
