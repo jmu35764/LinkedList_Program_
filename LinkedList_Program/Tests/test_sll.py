@@ -114,7 +114,7 @@ class TestSinglyLinkedList(unittest.TestCase):
         self.assertEqual(sl1._count, 3)  # Ensure the count remains unchanged
 
     def test_correct_count(self):
-        sl1.SinglyLinkedlist()
+        sl1 = SinglyLinkedlist()
         values = [1, 2, 3, 4, 5]
         sl1.build_list_forward(values)
 
