@@ -109,7 +109,9 @@ class SinglyLinkedList():
         current = self._head
         previous = None
         nodes_removed = 0
+
         while current:
+
             if current.data == value:
                 if previous is None:
                     self._head = current.next
@@ -134,6 +136,9 @@ class SinglyLinkedList():
         while current:
             output = output + str(current.data) + " -> "
             current = current.next
+
+            if self._tail.data != value and current is None:
+                raise ValueError(f"Value {value} not found in the list")
 
         return f"{output}None"
 
